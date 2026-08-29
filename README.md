@@ -4,4 +4,5 @@ Expo client for Cudium merchants.
 
 ## Changelog
 
+- 2.4.2 - reanimated 3.11 bump, button loading state
 - 2.4.1 - safe area handling on the home screen

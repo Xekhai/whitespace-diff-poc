@@ -4,12 +4,13 @@ import { Pressable, Text, StyleSheet } from "react-native";
 type Props = {
   label: string;
   onPress: () => void;
+  loading?: boolean;
 };
 
-export function PrimaryButton({ label, onPress }: Props) {
+export function PrimaryButton({ label, onPress, loading = false }: Props) {
   return (
-    <Pressable style={styles.button} onPress={onPress}>
-      <Text style={styles.label}>{label}</Text>
+    <Pressable style={styles.button} onPress={onPress} disabled={loading}>
+      <Text style={styles.label}>{loading ? "Please wait…" : label}</Text>
     </Pressable>
   );
 }
